@@ -16,7 +16,7 @@ our %THEME = (
     colors => {
         color1 => 'ff0000',
         color2 => '00ff00',
-        color3 => '0000ff',
+        color3 => {bg=>'0000ff'},
         color4 => {fg=>'000000', bg=>'ffffff'},
         color5 => sub {
             +{
