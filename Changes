@@ -1,3 +1,9 @@
+0.003   2020-06-07  Released-By: PERLANCAR; Urgency: medium
+
+	- [color theme Test::Static] test a color only returning background
+	  color and not foreground color.
+
+
 0.002   2020-06-07  Released-By: PERLANCAR; Urgency: medium
 
 	- [test] Add tests.
