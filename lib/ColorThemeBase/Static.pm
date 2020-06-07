@@ -1,4 +1,4 @@
-package ColorThemeBasic::Static;
+package ColorThemeBase::Static;
 
 # AUTHORITY
 # DATE
@@ -13,11 +13,11 @@ sub new {
 
     # check that %THEME exists
     my $theme_hash = \%{"$class\::THEME"};
-    unless (defined $theme->{v}) {
+    unless (defined $theme_hash->{v}) {
         die "Class $class does not define \%THEME with 'v' key";
     }
-    unless ($theme->{v} == 2) {
-        die "\%$class\::THEME's v is $theme->{v}, I only support v=2";
+    unless ($theme_hash->{v} == 2) {
+        die "\%$class\::THEME's v is $theme_hash->{v}, I only support v=2";
     }
 
     # check for known and required arguments
@@ -29,7 +29,7 @@ sub new {
             die "Unknown argument '$arg_name'" unless $args_spec->{$arg_name};
         }
         for my $arg_name (keys %$args_spec) {
-            die "Missing required parameter '$param_name'"
+            die "Missing required argument '$arg_name'"
                 if $args_spec->{$arg_name}{req} && !exists($args{$arg_name});
             # apply default
             $args{$arg_name} = $args_spec->{$arg_name}{default}
