@@ -1,3 +1,9 @@
+0.004   2020-06-08  Released-By: PERLANCAR; Urgency: medium; Backward-Compatible: no
+
+	- [incompatible] Adjust to ColorTheme 2.0.1 (rename
+	  get_color_list() to list_items()).
+
+
 0.003   2020-06-07  Released-By: PERLANCAR; Urgency: medium
 
 	- [color theme Test::Static] test a color only returning background
