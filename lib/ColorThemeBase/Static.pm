@@ -10,7 +10,7 @@ use strict 'subs', 'vars';
 
 use parent 'ColorThemeBase::Constructor';
 
-sub get_color_list {
+sub list_items {
     my $self = shift;
 
     my $theme_hash = \%{"$self->{orig_class}::THEME"};
