@@ -1,4 +1,4 @@
-package ColorThemeBase::Static;
+package ColorThemeBase::Static::FromObjectColors;
 
 # AUTHORITY
 # DATE

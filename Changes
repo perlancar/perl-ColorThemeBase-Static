@@ -1,3 +1,11 @@
+0.005   2020-06-08  Released-By: PERLANCAR; Urgency: medium
+
+	- Rename ColorThemeBase::Static{,::FromStructColors}. But the old name
+          is aliased.
+
+        - Add ColorThemeBase::Static::FromObjectColors.
+
+
 0.004   2020-06-08  Released-By: PERLANCAR; Urgency: medium; Backward-Compatible: no
 
 	- [incompatible] Adjust to ColorTheme 2.0.1 (rename
