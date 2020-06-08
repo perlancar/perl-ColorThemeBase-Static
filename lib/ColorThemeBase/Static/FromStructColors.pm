@@ -1,4 +1,4 @@
-package ColorThemeBase::Static;
+package ColorThemeBase::Static::FromStructColors;
 
 # AUTHORITY
 # DATE
@@ -29,7 +29,7 @@ sub get_color {
     if (ref $c eq 'CODE') {
         my $c2 = $c->($self, $name, $args);
         if (ref $c2 eq 'CODE') {
-            die "Color '$name' of theme $self->{orig_hash} returns coderef, ".
+            die "Color '$name' of theme $self->{orig_class} returns coderef, ".
                 "which after called still returns a coderef";
         }
         return $c2;
@@ -38,14 +38,18 @@ sub get_color {
 }
 
 1;
-# ABSTRACT: Base class for color theme modules with static list of colors
+# ABSTRACT: Base class for color theme modules with static list of items (from %THEME)
 
 =for Pod::Coverage ^(.+)$
 
 =head1 DESCRIPTION
 
-This base class is for color theme modules that only have static color list,
-i.e. all its colors are listed in the %THEME package variable, under the key
-C<colors>.
+This base class is for color theme modules that only have static list of items,
+i.e. all from the %THEME package variable, under the key C<colors>.
 
 Note that the color itself can be dynamic, e.g. return a coderef.
+
+
+=head1 SEE ALSO
+
+L<ColorThemeBase::Static::FromObjectColors>
