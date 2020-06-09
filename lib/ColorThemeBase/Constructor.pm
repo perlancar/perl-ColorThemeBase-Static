@@ -25,7 +25,7 @@ sub new {
     {
         my $args_spec = $theme_hash->{args};
         last unless $args_spec;
-        for my $arg_name (keys %$args_spec) {
+        for my $arg_name (keys %args) {
             die "Unknown argument '$arg_name'" unless $args_spec->{$arg_name};
         }
         for my $arg_name (keys %$args_spec) {
