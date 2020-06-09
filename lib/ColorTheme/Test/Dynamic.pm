@@ -11,7 +11,7 @@ use parent 'ColorThemeBase::Base';
 
 our %THEME = (
     v => 2,
-    summary => 'A simple color theme',
+    summary => 'A dynamic color theme',
     dynamic => 1,
     args => {
         tone => {schema=>['str*', in=>['red','green']], req=>1},
@@ -46,4 +46,4 @@ sub get_item_color {
 }
 
 1;
-# ABSTRACT: A dynamic color theme
+# ABSTRACT:

@@ -12,7 +12,7 @@ use Color::RGB::Util 'rand_rgb_color';
 
 our %THEME = (
     v => 2,
-    summary => 'A simple color theme',
+    summary => 'A static color theme',
     items => {
         color1 => 'ff0000',
         color2 => '00ff00',
@@ -28,4 +28,4 @@ our %THEME = (
 );
 
 1;
-# ABSTRACT: A color theme with static list of colors
+# ABSTRACT:
