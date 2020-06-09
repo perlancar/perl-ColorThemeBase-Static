@@ -8,22 +8,22 @@ package ColorThemeBase::Static::FromStructColors;
 use strict 'subs', 'vars';
 #use warnings;
 
-use parent 'ColorThemeBase::Constructor';
+use parent 'ColorThemeBase::Base';
 
 sub list_items {
     my $self = shift;
 
     my $theme_hash = \%{"$self->{orig_class}::THEME"};
-    my @list = sort keys %{ $theme_hash->{colors} };
+    my @list = sort keys %{ $theme_hash->{items} };
     wantarray ? @list : \@list;
 }
 
-sub get_color {
+sub get_item_color {
     my ($self, $name, $args) = @_;
 
     my $theme_hash = \%{"$self->{orig_class}::THEME"};
 
-    my $c = $theme_hash->{colors}{$name};
+    my $c = $theme_hash->{items}{$name};
     return unless defined $c;
 
     if (ref $c eq 'CODE') {
@@ -45,9 +45,9 @@ sub get_color {
 =head1 DESCRIPTION
 
 This base class is for color theme modules that only have static list of items,
-i.e. all from the %THEME package variable, under the key C<colors>.
+i.e. all from the %THEME package variable, under the key C<items>.
 
-Note that the color itself can be dynamic, e.g. return a coderef.
+Note that the item color itself can be dynamic, e.g. return a coderef.
 
 
 =head1 SEE ALSO

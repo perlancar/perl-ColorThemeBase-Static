@@ -7,13 +7,13 @@ package ColorTheme::Test::Static;
 
 use strict;
 use warnings;
-use parent 'ColorThemeBase::Static';
+use parent 'ColorThemeBase::Static::FromStructColors';
 use Color::RGB::Util 'rand_rgb_color';
 
 our %THEME = (
     v => 2,
     summary => 'A simple color theme',
-    colors => {
+    items => {
         color1 => 'ff0000',
         color2 => '00ff00',
         color3 => {bg=>'0000ff'},

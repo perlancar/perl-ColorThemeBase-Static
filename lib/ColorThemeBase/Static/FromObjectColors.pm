@@ -8,18 +8,18 @@ package ColorThemeBase::Static::FromObjectColors;
 use strict 'subs', 'vars';
 #use warnings;
 
-use parent 'ColorThemeBase::Constructor';
+use parent 'ColorThemeBase::Base';
 
 sub list_items {
     my $self = shift;
-    my @list = sort keys %{ $self->{colors} };
+    my @list = sort keys %{ $self->{items} };
     wantarray ? @list : \@list;
 }
 
-sub get_color {
+sub get_item_color {
     my ($self, $name, $args) = @_;
 
-    my $c = $self->{colors}{$name};
+    my $c = $self->{items}{$name};
     return unless defined $c;
 
     if (ref $c eq 'CODE') {
@@ -34,17 +34,17 @@ sub get_color {
 }
 
 1;
-# ABSTRACT: Base class for color theme modules with static list of items (from object's colors key)
+# ABSTRACT: Base class for color theme modules with static list of items (from object's items key)
 
 =for Pod::Coverage ^(.+)$
 
 =head1 DESCRIPTION
 
 Much like L<ColorThemeBase::Static::FromStructColors>, this base class also gets
-the list of items from a data structure, in this case the object's C<colors> key
-which is assumed to be a mapping of item names and color codes, much like the
-C<colors> property of the color theme structure. It is expected that the
-subclass sets the value of this key during initialization.
+the list of items from a data structure, in this case the object's C<items> key
+which is assumed to be a mapping of item names and item colors, much like the
+C<items> property of the color theme structure. It is expected that the subclass
+sets the value of this key during initialization.
 
 
 =head1 SEE ALSO

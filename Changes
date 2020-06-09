@@ -1,3 +1,11 @@
+0.006   2020-06-09  Released-By: PERLANCAR; Urgency: medium; Backward-Compatible: no
+
+        - Adjust to ColorTheme 2.1.0 (add get_args(), get_struct(), rename
+          get_color to get_item_color).
+
+        - New base class: ColorThemeBase::Base.
+
+
 0.005   2020-06-08  Released-By: PERLANCAR; Urgency: medium
 
 	- Rename ColorThemeBase::Static{,::FromStructColors}. But the old name
