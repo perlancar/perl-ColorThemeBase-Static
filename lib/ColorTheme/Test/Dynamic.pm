@@ -18,6 +18,12 @@ our %THEME = (
         opt1 => {schema=>'str*', default=>'foo'},
         opt2 => {schema=>'str*'},
     },
+    examples => [
+        {
+            summary => 'An red tone',
+            args => { tone => 'red' },
+        },
+    ],
 );
 
 sub list_items {
