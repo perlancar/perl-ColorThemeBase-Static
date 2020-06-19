@@ -1,3 +1,8 @@
+0.008   2020-06-19  Released-By: PERLANCAR; Urgency: medium
+
+	- Add example.
+
+
 0.007   2020-06-19  Released-By: PERLANCAR; Urgency: medium
 
 	- Make get_struct() also work as a static method (ColorTheme
