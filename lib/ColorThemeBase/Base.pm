@@ -10,8 +10,12 @@ use strict 'subs', 'vars';
 use parent 'ColorThemeBase::Constructor';
 
 sub get_struct {
-    my $self = shift;
-    \%{"$self->{orig_class}::THEME"};
+    my $self_or_class = shift;
+    if (ref $self_or_class) {
+        \%{"$self_or_class->{orig_class}::THEME"};
+    } else {
+        \%{"$self_or_class\::THEME"};
+    }
 }
 
 sub get_args {
